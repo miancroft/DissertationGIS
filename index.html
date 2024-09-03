@@ -40,7 +40,7 @@
             transition: margin-left 0.3s;
             padding: 20px;
             margin-left: 150px;
-            max-width: 800px;
+            max-width: 1200px; /* Increased to accommodate 4 in a row */
             margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
@@ -109,6 +109,14 @@
             .navbar .toggle-btn {
                 left: 10px;
             }
+            .objectives {
+                flex-direction: column;
+                align-items: center;
+            }
+            .objective-box {
+                width: 90%;
+                margin-bottom: 15px;
+            }
         }
 
         /* Ensure images fit within the content area */
@@ -141,23 +149,23 @@
         .objectives {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
             margin-top: 20px;
         }
         .objective-box {
             background-color: #ecf0f1;
             border-radius: 8px;
             padding: 10px;
-            width: 48%;
-            margin-bottom: 20px;
+            width: 22%; /* Adjusted to fit four boxes in a row */
             position: relative;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text within the box */
         }
         .objective-box::before {
             content: attr(data-number);
             position: absolute;
             top: -10px;
-            left: -10px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #87CEEB;
             color: white;
             border-radius: 50%;
