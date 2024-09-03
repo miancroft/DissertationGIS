@@ -42,6 +42,17 @@
             max-width: 800px;
             margin: 20px auto;
         }
+        .navbar {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
         .figures {
             text-align: center;
             margin: 40px 0;
@@ -105,14 +116,27 @@
             margin-top: 20px;
         }
         .full-width-figure img {
-            max-width: 100%;
+            max-width: 90%; /* Reduce size to 90% */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+        .footer {
+            margin-top: 50px;
+            font-size: 1em;
+            text-align: center;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="research_paper_link">Research Paper</a>
+        <a href="technical_documents_link">Technical Documents</a>
+    </div>
+
     <div style="text-align: center; margin-bottom: 20px;">
         <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title" style="max-width: 100%; height: auto;">
     </div>
@@ -143,39 +167,25 @@
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
-            <p class="figure-caption">Figure 1: Study Map</p>
         </div>
 
-        <h3>Key Findings</h3>
-        <p>
-            1. <strong>Critical Features for Plastic Classification:</strong> Mean saturation and standard deviation of RGB values emerged as essential spectral features, while contrast and dissimilarity were key textural features for accurately classifying plastic waste.
-        </p>
-        <p>
-            2. <strong>Imagery Resolution Effectiveness:</strong> PlanetScope's 3-meter resolution proved inadequate for detecting urban plastic waste, whereas UAV imagery (~5 cm resolution) provided significantly more precise data for identifying plastic accumulations across the city.
-        </p>
-        <p>
-            3. <strong>Model Performance:</strong> The Random Forest (RF) and Support Vector Machine (SVM) models achieved high accuracy during training (86% and 96%, respectively), but their accuracy dropped significantly in real-world applications (38% for RF and 28% for SVM) due to misclassification errors, particularly between buildings and plastics. This highlights the need for model improvements.
-        </p>
-        <p>
-            4. <strong>Scalability and Integration:</strong> The proposed methodology shows potential for scaling across Vientiane, contingent on model enhancements and increased computational efficiency. Upscaling to a 20 km² area is estimated to take 2.4 weeks using a powerful GPU, with city-wide upscaling taking approximately 3.4 months. Integrating these methods with GIS could further optimize plastic waste monitoring and collection strategies.
-        </p>
-
-        <h3>The Use of Drone Imagery vs. PlanetScope Imagery</h3>
+        <h3>PlanetScope vs. UAV Imagery</h3>
         <div class="key-figures">
             <div class="figure">
                 <img src="https://miancroft.github.io/DissertationGIS/Images/PlanetversusDrone.png" alt="PlanetScope vs. UAV Imagery">
-                <p class="figure-caption">Figure 2: PlanetScope vs. UAV Imagery</p>
             </div>
+        </div>
+
+        <h3>Feature Prediction Results</h3>
+        <div class="key-figures">
             <div class="figure">
                 <img src="https://miancroft.github.io/DissertationGIS/Images/Feature_prediction.png" alt="Feature Prediction">
-                <p class="figure-caption">Figure 3: Feature Prediction</p>
             </div>
         </div>
 
         <h3>RF Model Predictions vs. Human Predictions</h3>
         <div class="full-width-figure">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine.png" alt="RF vs Human Predictions">
-            <p class="figure-caption">Figure 4: RF Model Predictions vs. Human Predictions</p>
         </div>
 
         <h3>Conclusion</h3>
@@ -196,5 +206,11 @@
             Lavender, S. (2022). Detection of Waste Plastics in the Environment: Application of Copernicus Earth Observation Data. Remote Sensing, 14(19), 4772. https://doi.org/10.3390
         </p>
     </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
+    </div>
+
 </body>
 </html>
