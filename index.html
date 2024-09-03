@@ -121,10 +121,19 @@
 
         /* Ensure images fit within the content area */
         .content img {
-            max-width: 75%; /* Reduce image size to 75% */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .central-image {
+            max-width: 75%;
+            display: block;
+            margin: 0 auto;
+        }
+        .full-width-image {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
 
         /* Flexbox for side-by-side figures */
@@ -198,12 +207,12 @@
         <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
         <h4 style="color: white;">Links to Papers</h4>
         <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Research_Paper_ERA.pdf">Research Paper</a>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Report</a>
+        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
     </div>
 
     <div class="content" id="mainContent">
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title" class="full-width-image">
         </div>
         <h1>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</h1>
         <h2>Mia Croft</h2>
@@ -230,7 +239,7 @@
 
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure" style="margin-top: 40px;">
-            <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map" class="central-image">
         </div>
 
         <div class="dual-titles">
@@ -248,7 +257,7 @@
 
         <h3>RF Model Predictions vs. Human Predictions</h3>
         <div class="full-width-figure">
-            <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine.png" alt="RF vs Human Predictions">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine.png" alt="RF vs Human Predictions" class="central-image">
         </div>
 
         <h3>Conclusion</h3>
