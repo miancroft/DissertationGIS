@@ -136,6 +136,37 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
+
+        /* Objective boxes styling */
+        .objectives {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .objective-box {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 10px;
+            width: 48%;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .objective-box::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background-color: #87CEEB;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +175,7 @@
         <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
         <h4 style="color: white;">Links to Papers</h4>
         <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Research_Paper_ERA.pdf">Research Paper</a>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Report</a>
+        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
     </div>
 
     <div class="content" id="mainContent">
