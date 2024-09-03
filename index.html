@@ -11,7 +11,7 @@
             line-height: 1.6;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         h1 {
             color: #2c3e50;
@@ -35,81 +35,55 @@
             text-align: justify;
         }
         .content {
-            background-color: #fff;
+            transition: margin-left 0.3s;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 250px;
             max-width: 800px;
             margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        /* Sidebar styling */
-    .sidebar {
-        height: 100%;
-        width: 250px; /* Width of the sidebar when expanded */
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #2c3e50;
-        overflow-x: hidden;
-        transition: 0.3s;
-        padding-top: 60px;
-    }
-
-    /* Sidebar links */
-    .sidebar a {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 1.2em;
-        color: white;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidebar a:hover {
-        background-color: #575757;
-    }
-
-    /* Style for sidebar toggle button */
-    .sidebar .toggle-btn {
-        position: absolute;
-        top: 15px;
-        left: 250px;
-        font-size: 1.5em;
-        margin-left: 50px;
-        color: white;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    /* Style when sidebar is collapsed */
-    .sidebar.collapsed {
-        width: 0;
-    }
-
-    .sidebar.collapsed .toggle-btn {
-        left: 0;
-    }
-
-    .sidebar.collapsed a {
-        display: none;
-    }
-
-    /* Style to shift content when sidebar is expanded/collapsed */
-    .content {
-        transition: margin-left 0.3s;
-        padding: 20px;
-        margin-left: 250px;
-    }
-
-    .sidebar.collapsed + .content {
-        margin-left: 0;
-    }
-        .figures {
-            text-align: center;
-            margin: 40px 0;
+        .navbar {
+            height: 100%;
+            width: 250px; /* Width of the sidebar when expanded */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
         }
-        .references {
-            font-size: 0.9em;
-            color: #2c3e50;
+        .navbar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar .toggle-btn {
+            position: absolute;
+            top: 15px;
+            left: 250px;
+            font-size: 1.5em;
+            margin-left: 50px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .navbar.collapsed {
+            width: 0;
+        }
+        .navbar.collapsed .toggle-btn {
+            left: 0;
+        }
+        .navbar.collapsed a {
+            display: none;
         }
         .objectives {
             display: flex;
@@ -156,11 +130,6 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
-        .figure-caption {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #555;
-        }
         .full-width-figure {
             text-align: center;
             margin-top: 20px;
@@ -181,26 +150,16 @@
 </head>
 <body>
 
-  <div class="sidebar" id="mySidebar">
-    <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
-    <a href="research_paper_link">Research Paper</a>
-    <a href="technical_documents_link">Technical Documents</a>
-</div>
-
-<script>
-    // JavaScript function to toggle the sidebar
-    function toggleSidebar() {
-        var sidebar = document.getElementById("mySidebar");
-        sidebar.classList.toggle("collapsed");
-    }
-</script>
-
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title" style="max-width: 100%; height: auto;">
+    <!-- Sidebar Navigation -->
+    <div class="navbar" id="mySidebar">
+        <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
+        <a href="research_paper_link">Research Paper</a>
+        <a href="technical_documents_link">Technical Documents</a>
     </div>
+
     <div class="content">
         <h1>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</h1>
-        <h2>Mia Croft</h2>
+        <h2>Mia Croft</h3>
         <h3>For the degree of MSc in Geographical Information Science</h3>
 
         <h3>Abstract</h3>
@@ -232,10 +191,6 @@
             <div class="figure">
                 <img src="https://miancroft.github.io/DissertationGIS/Images/PlanetversusDrone.png" alt="PlanetScope vs. UAV Imagery">
             </div>
-        </div>
-
-        <h3>Feature Prediction Results</h3>
-        <div class="key-figures">
             <div class="figure">
                 <img src="https://miancroft.github.io/DissertationGIS/Images/Feature_prediction.png" alt="Feature Prediction">
             </div>
@@ -263,12 +218,19 @@
             <br>
             Lavender, S. (2022). Detection of Waste Plastics in the Environment: Application of Copernicus Earth Observation Data. Remote Sensing, 14(19), 4772. https://doi.org/10.3390
         </p>
+
+        <h3>Contact Details</h3>
+        <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
+
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
-    </div>
+    <script>
+        // JavaScript function to toggle the sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.classList.toggle("collapsed");
+        }
+    </script>
 
 </body>
 </html>
