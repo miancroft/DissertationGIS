@@ -121,7 +121,7 @@
 
         /* Ensure images fit within the content area */
         .content img {
-            max-width: 100%;
+            max-width: 75%; /* Reduce image size to 75% */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -138,7 +138,7 @@
             flex: 1;
             margin: 10px;
             text-align: center;
-            max-width: 45%; /* Ensure figures don't overlap */
+            max-width: 45%;
         }
         .key-figures .figure img {
             width: 100%;
@@ -157,10 +157,10 @@
             background-color: #ecf0f1;
             border-radius: 8px;
             padding: 10px;
-            width: 22%; /* Adjusted to fit four boxes in a row */
+            width: 22%;
             position: relative;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center text within the box */
+            text-align: center;
         }
         .objective-box::before {
             content: attr(data-number);
@@ -177,6 +177,19 @@
             line-height: 25px;
             font-weight: bold;
         }
+
+        /* Dual Titles Styling */
+        .dual-titles {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .dual-titles h3 {
+            flex: 1;
+            margin: 0 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -185,7 +198,7 @@
         <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
         <h4 style="color: white;">Links to Papers</h4>
         <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Research_Paper_ERA.pdf">Research Paper</a>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Report</a>
+        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
     </div>
 
     <div class="content" id="mainContent">
