@@ -40,7 +40,7 @@
             transition: margin-left 0.3s;
             padding: 20px;
             margin-left: 150px;
-            max-width: 1200px; /* Increased to accommodate 4 in a row */
+            max-width: calc(100% - 170px); /* Prevent content from overflowing into the sidebar */
             margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
@@ -132,11 +132,13 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
         .key-figures .figure {
             flex: 1;
             margin: 0 10px;
             text-align: center;
+            max-width: 45%; /* Ensure figures don't overlap */
         }
         .key-figures .figure img {
             width: 100%;
@@ -183,7 +185,7 @@
         <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
         <h4 style="color: white;">Links to Papers</h4>
         <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Research_Paper_ERA.pdf">Research Paper</a>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Report</a>
+        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
     </div>
 
     <div class="content" id="mainContent">
