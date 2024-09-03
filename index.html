@@ -3,8 +3,7 @@
 <head>
     <title>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</title>
     <meta charset="UTF-8">
-    <meta name="author" content="Mia Croft">
-    <meta name="degree" content="MSc in Geographical Information Science">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -87,27 +86,25 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .navbar.collapsed {
+        .collapsed {
             width: 0;
             overflow: hidden;
         }
-        .navbar.collapsed .toggle-btn {
+        .collapsed .content {
+            margin-left: 0;
+        }
+        .collapsed .toggle-btn {
             left: 0;
         }
-        .navbar.collapsed a, .navbar.collapsed h4 {
-            display: none;
-        }
 
-        /* Responsive Design: Hide sidebar on small screens */
+        /* Responsive Design: Adjustments for small screens */
         @media screen and (max-width: 768px) {
             .navbar {
                 width: 0;
-                position: fixed;
+                padding-top: 15px;
             }
             .content {
                 margin-left: 0;
-                padding-left: 20px;
-                padding-right: 20px;
             }
             .navbar .toggle-btn {
                 left: 10px;
@@ -124,7 +121,7 @@
         <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
     </div>
 
-    <div class="content">
+    <div class="content" id="mainContent">
         <div style="text-align: center; margin-bottom: 20px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title" style="max-width: 100%; height: auto;">
         </div>
@@ -200,7 +197,9 @@
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("mySidebar");
+            var content = document.getElementById("mainContent");
             sidebar.classList.toggle("collapsed");
+            content.classList.toggle("collapsed");
         }
     </script>
 
