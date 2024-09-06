@@ -37,80 +37,13 @@
             text-align: justify;
         }
         .content {
-            transition: margin-left 0.3s;
             padding: 20px;
-            margin-left: 150px;
             max-width: 1000px; /* Increased to accommodate 4 in a row */
             margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .navbar {
-            height: 100%;
-            width: 150px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #2c3e50;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
-        }
-        .navbar h4 {
-            color: white;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #575757;
-        }
-        .navbar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 1.2em;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-        .navbar a:hover {
-            background-color: #575757;
-        }
-        .navbar .toggle-btn {
-            position: absolute;
-            top: 15px;
-            left: 150px;
-            font-size: 1.5em;
-            margin-left: 50px;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .collapsed {
-            width: 0;
-            overflow: hidden;
-        }
-        .collapsed .content {
-            margin-left: 0;
-        }
-        .collapsed .toggle-btn {
-            left: 0;
-        }
-
-        /* Responsive Design: Adjustments for small screens */
-        @media screen and (max-width: 768px) {
-            .navbar {
-                width: 0;
-                padding-top: 15px;
-            }
-            .content {
-                margin-left: 0;
-            }
-            .navbar .toggle-btn {
-                left: 10px;
-            }
-        }
-
         /* Ensure images fit within the content area */
         .content img {
             max-width: 100%;
@@ -170,15 +103,7 @@
     </style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="navbar" id="mySidebar">
-        <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
-        <h4 style="color: white;">Links to Papers</h4>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Research_Paper_ERA.pdf">Research Paper</a>
-        <a href="https://github.com/miancroft/DissertationGIS/raw/main/PDFs/Technical_Report_ERA.pdf">Technical Documents</a>
-    </div>
-
-    <div class="content" id="mainContent">
+    <div class="content">
         <div style="text-align: center; margin-bottom: 20px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title">
         </div>
@@ -248,17 +173,6 @@
 
         <h3>Contact Details</h3>
         <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
-
     </div>
-
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("mySidebar");
-            var content = document.getElementById("mainContent");
-            sidebar.classList.toggle("collapsed");
-            content.classList.toggle("collapsed");
-        }
-    </script>
-
 </body>
 </html>
