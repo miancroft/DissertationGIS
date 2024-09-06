@@ -60,7 +60,7 @@
         }
         .key-figures .figure {
             flex: 1;
-            margin: 0 10px;
+            margin: 0 15px; /* Increased margin to separate figures */
             text-align: center;
         }
         .key-figures .figure img {
@@ -73,6 +73,7 @@
         /* Objective boxes styling */
         .objectives {
             display: flex;
+            flex-wrap: wrap; /* Ensure that boxes wrap to the next line if needed */
             justify-content: space-between;
             margin-top: 20px;
         }
@@ -81,6 +82,7 @@
             border-radius: 8px;
             padding: 10px;
             width: 23%; /* Adjusted to fit four boxes in a row */
+            margin-bottom: 20px; /* Added margin to separate boxes vertically */
             position: relative;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             text-align: center; /* Center text within the box */
@@ -99,6 +101,18 @@
             text-align: center;
             line-height: 25px;
             font-weight: bold;
+        }
+
+        /* Dual centered headings */
+        .dual-titles {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .dual-titles h3 {
+            margin: 0 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -173,6 +187,7 @@
 
         <h3>Contact Details</h3>
         <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
+
     </div>
 </body>
 </html>
