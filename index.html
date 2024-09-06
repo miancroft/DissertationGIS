@@ -78,6 +78,7 @@
             margin-top: 20px;
         }
         .objective-box {
+            position: relative; /* Added to position the number circle */
             background-color: #ecf0f1;
             border-radius: 8px;
             padding: 20px; /* Increased padding for better appearance */
@@ -90,7 +91,7 @@
         .objective-box::before {
             content: attr(data-number);
             position: absolute;
-            top: -10px;
+            top: -15px;
             left: 50%;
             transform: translateX(-50%);
             background-color: #87CEEB;
@@ -103,24 +104,10 @@
             font-weight: bold;
         }
 
-        /* Dual centered headings */
-        .dual-titles {
-            display: flex;
-            justify-content: space-between;
-            margin: 30px 0; /* Added margin for spacing between titles and content */
-        }
-        .dual-titles h3 {
-            flex: 1;
+        /* Removed dual titles to ensure each title stays above its corresponding figure */
+        .figure h3 {
             text-align: center;
-            margin: 0;
-        }
-        .dual-titles h3:first-child {
-            text-align: right;
-            margin-right: auto; /* Ensure it aligns to the left side of the container */
-        }
-        .dual-titles h3:last-child {
-            text-align: left;
-            margin-left: auto; /* Ensure it aligns to the right side of the container */
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -157,15 +144,13 @@
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
         </div>
 
-        <div class="dual-titles">
-            <h3>PlanetScope vs. UAV Imagery</h3>
-            <h3>Key Plastic Features</h3>
-        </div>
         <div class="key-figures">
             <div class="figure">
+                <h3>PlanetScope vs. UAV Imagery</h3>
                 <img src="https://miancroft.github.io/DissertationGIS/Images/PlanetversusDrone.png" alt="PlanetScope vs. UAV Imagery">
             </div>
             <div class="figure">
+                <h3>Key Plastic Features</h3>
                 <img src="https://miancroft.github.io/DissertationGIS/Images/Feature_prediction.png" alt="Feature Prediction">
             </div>
         </div>
