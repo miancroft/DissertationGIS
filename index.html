@@ -109,6 +109,24 @@
             text-align: center;
             margin-bottom: 10px;
         }
+
+        /* Styling for the Key Results section */
+        .key-results {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .key-results p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .key-results h3 {
+            text-align: center;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +140,7 @@
 
         <h3>Abstract</h3>
         <p>
-            Effective monitoring of urban plastic pollution is crucial for sustainable waste management, especially in rapidly urbanising regions. This study, conducted in Vientiane, Laos, utilised PlanetScope satellite imagery with a 3-meter resolution and high-resolution UAV imagery (~5 cm) to detect and map plastic waste. The research focuses on four key components:
+            Effective monitoring of urban plastic pollution is crucial for sustainable waste management, especially in rapidly urbanising regions. This study, conducted in Vientiane, Laos, utilized PlanetScope satellite imagery with a 3-meter resolution and high-resolution UAV imagery (~5 cm) to detect and map plastic waste. The research focuses on four key components:
         </p>
         <div class="objectives">
             <div class="objective-box" data-number="1">
@@ -142,6 +160,15 @@
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure" style="margin-top: 40px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
+        </div>
+
+        <!-- Key Results Section -->
+        <div class="key-results">
+            <h3>Key Results</h3>
+            <p>The study identified mean saturation and standard deviation of RGB values as critical spectral features, while contrast and dissimilarity were key textural features for accurately classifying plastic.</p>
+            <p>PlanetScope’s 3-meter resolution was found to be inadequate for detecting urban plastic waste accumulations, whereas UAV imagery (~5 cm resolution) provided more precise data for identifying plastic across the city.</p>
+            <p>The RF and SVM models achieved 86% and 96% accuracy, respectively, during training but experienced significant accuracy drops in real-world applications, with 38% for RF and 28% for SVM, due to misclassification errors, particularly between buildings and plastics.</p>
+            <p>Consequently, this study recommends several improvements for future research.</p>
         </div>
 
         <div class="key-figures">
