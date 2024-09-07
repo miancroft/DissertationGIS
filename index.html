@@ -47,7 +47,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-     /* Objective boxes styling */
+ /* Objective boxes styling */
 .objectives {
     display: flex;
     justify-content: space-between;
@@ -63,24 +63,26 @@
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-bottom: 40px; /* Ensures space below for the number */
 }
 
-/* Numbers inside the boxes, centered */
+/* Numbers on the border of the boxes */
 .objective-box::before {
     content: attr(data-number);
     position: absolute;
-    top: 15px; /* Adjust the top position for alignment with the top of the box */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure the number is horizontally centered */
+    top: -20px; /* Position the number above the box, just outside */
+    left: 50%; /* Center the number horizontally on the border */
+    transform: translateX(-50%); /* Ensures horizontal centering */
     background-color: #87CEEB;
     color: white;
     border-radius: 50%;
-    width: 40px; /* Make the number circle larger */
+    width: 40px; /* Size of the circle */
     height: 40px;
     text-align: center;
-    line-height: 40px; /* Ensures the number is vertically centered inside the circle */
+    line-height: 40px; /* Vertically centers the number in the circle */
     font-weight: bold;
     font-size: 1.2em; /* Adjust font size for better readability */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
 
