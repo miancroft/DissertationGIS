@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        body, p, ul, li {
             font-family: Arial, sans-serif;
+            font-size: 1.1em;
+            color: #555;
             line-height: 1.6;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
         }
+
+        ul, li {
+            margin: 0;
+            padding-left: 1.2em; /* Adjust this value for alignment */
+            list-style-position: outside;
+        }
+
         h1 {
             color: #2c3e50;
             text-align: center;
@@ -30,12 +36,7 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        p {
-            color: #555;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
+
         .content {
             padding: 20px;
             max-width: 1000px;
@@ -76,15 +77,9 @@
             margin-bottom: 10px;
         }
 
-        .data-text p, .data-text ul {
-            font-size: 1.1em;
-            color: #555;
-            text-align: justify;
-        }
-
         .data-text ul {
             list-style-type: disc;
-            margin-left: 20px;
+            margin-left: 0;
         }
 
         /* Ensure images fit within the content area */
@@ -133,7 +128,7 @@
         <h3>Data Sources</h3>
         <div class="data-sources">
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/satellite_cartoon.png" alt="Satellite" class="data-image">
+                <img src="path_to_satellite_image.jpg" alt="Satellite" class="data-image">
                 <div class="data-text">
                     <h4>Satellite - Planet’s Super-Dove</h4>
                     <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
@@ -143,7 +138,7 @@
             </div>
 
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/Drone_cartoon.png" alt="Drone" class="data-image">
+                <img src="path_to_drone_image.jpg" alt="Drone" class="data-image">
                 <div class="data-text">
                     <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
                     <p>Data obtained as part of a World Bank project.</p>
@@ -152,14 +147,14 @@
             </div>
 
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
+                <img src="path_to_field_data_image.jpg" alt="Field Data Collection" class="data-image">
                 <div class="data-text">
                     <h4>Ground Survey Data</h4>
                     <p>Field data was essential for two key reasons:</p>
-            
+                    <ul>
                         <li>To provide a reference for plastic locations, aiding in the classification of plastic in drone and satellite imagery.</li>
                         <li>To gather information on the types and sizes of plastic found around Vientiane.</li>
-                    
+                    </ul>
                     <p>Two field surveys were conducted: one using existing pLitter Survey data, and another collecting primary data in June 2024.</p>
                 </div>
             </div>
@@ -168,6 +163,12 @@
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure" style="margin-top: 40px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
+        </div>
+
+        <!-- Methodology Section -->
+        <h3>Methodology</h3>
+        <div class="full-width-figure" style="margin-top: 20px;">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/methodsimage.png" alt="Methodology Figure">
         </div>
 
         <h3>Key Results</h3>
