@@ -35,6 +35,7 @@
             font-size: 1.2em;
             margin-bottom: 20px;
             text-align: center;
+            margin-top: 40px; /* Adds extra space before each section */
         }
 
         .content {
@@ -51,41 +52,34 @@
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            gap: 20px; /* Adds space between the boxes horizontally */
         }
-  .objectives {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px; /* This adds space between the boxes horizontally */
-}
+        .objective-box {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            width: 23%;
+            height: 200px; /* Makes the boxes longer vertically */
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
 
-.objective-box {
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    padding: 20px; /* Increased padding for better spacing inside the box */
-    width: 23%;
-    height: 200px; /* Increase this value to make the boxes longer vertically */
-    position: relative;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* This adds vertical spacing between the boxes */
-
-    .objective-box::before {
-    content: attr(data-number);
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #87CEEB;
-    color: white;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 25px;
-    font-weight: bold;
-}
-}
+        /* Numbers inside the boxes */
+        .objective-box::before {
+            content: attr(data-number);
+            position: absolute;
+            top: 10px; /* Adjusted to put the number inside the box */
+            left: 10px;
+            background-color: #87CEEB;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
 
         /* Full width container for data sources */
         .data-sources {
@@ -129,6 +123,10 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-width-figure {
+            margin-top: 40px; /* Adds space before figures */
         }
 
         /* Flexbox for side-by-side figures */
@@ -185,7 +183,7 @@
         <h3>Data Sources</h3>
         <div class="data-sources">
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/satellite_cartoon.png" alt="Satellite" class="data-image">
+                <img src="path_to_satellite_image.jpg" alt="Satellite" class="data-image">
                 <div class="data-text">
                     <h4>Satellite - Planet’s Super-Dove</h4>
                     <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
@@ -195,7 +193,7 @@
             </div>
 
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/Drone_cartoon.png" alt="Drone" class="data-image">
+                <img src="path_to_drone_image.jpg" alt="Drone" class="data-image">
                 <div class="data-text">
                     <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
                     <p>Data obtained as part of a World Bank project.</p>
@@ -204,7 +202,7 @@
             </div>
 
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
+                <img src="path_to_field_data_image.jpg" alt="Field Data Collection" class="data-image">
                 <div class="data-text">
                     <h4>Ground Survey Data</h4>
                     <p>Field data was essential for two key reasons:</p>
@@ -218,7 +216,7 @@
         </div>
 
         <h3>Study Map and Locations of Data Sources</h3>
-        <div class="full-width-figure" style="margin-top: 40px;">
+        <div class="full-width-figure">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
         </div>
 
