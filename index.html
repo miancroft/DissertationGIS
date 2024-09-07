@@ -46,6 +46,37 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Objective boxes styling */
+        .objectives {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .objective-box {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 10px;
+            width: 23%;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .objective-box::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #87CEEB;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
         /* Full width container for data sources */
         .data-sources {
             display: block;
@@ -124,6 +155,22 @@
             Effective monitoring of urban plastic pollution is crucial for sustainable waste management, especially in rapidly urbanising regions. This study, conducted in Vientiane, Laos, utilized PlanetScope satellite imagery with a 3-meter resolution and high-resolution UAV imagery (~5 cm) to detect and map plastic waste. The research focuses on four key components:
         </p>
 
+        <!-- Four Objectives Section -->
+        <div class="objectives">
+            <div class="objective-box" data-number="1">
+                Characterising urban plastic waste using spectral and textural features.
+            </div>
+            <div class="objective-box" data-number="2">
+                Evaluating the effectiveness of PlanetScope and UAV imagery (RGB) for plastic waste detection.
+            </div>
+            <div class="objective-box" data-number="3">
+                Assessing the accuracy of Random Forest (RF) and Support Vector Machine (SVM) algorithms in classifying plastic.
+            </div>
+            <div class="objective-box" data-number="4">
+                Examining the operability and scalability of these methodologies for urban waste management.
+            </div>
+        </div>
+
         <!-- Data Sources Section -->
         <h3>Data Sources</h3>
         <div class="data-sources">
@@ -147,7 +194,7 @@
             </div>
 
             <div class="data-box">
-                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection.png" alt="Field Data Collection" class="data-image">
                 <div class="data-text">
                     <h4>Ground Survey Data</h4>
                     <p>Field data was essential for two key reasons:</p>
