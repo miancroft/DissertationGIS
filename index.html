@@ -69,6 +69,22 @@
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* This adds vertical spacing between the boxes */
+
+    .objective-box::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #87CEEB;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+}
 }
 
         /* Full width container for data sources */
