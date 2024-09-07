@@ -44,121 +44,49 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        /* Ensure images fit within the content area */
-        .content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
 
-        /* Flexbox for side-by-side figures */
-        .key-figures {
+        /* Full width container for data sources */
+        .data-sources {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             margin-top: 20px;
-        }
-        .key-figures .figure {
-            flex: 1;
-            margin: 0 10px; /* Reduced margin to fit figures within the content width */
-            text-align: center;
-        }
-        .key-figures .figure img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            gap: 20px; /* Adds space between each box */
         }
 
-        /* Objective boxes styling */
-        .objectives {
+        /* Styling each data box */
+        .data-box {
             display: flex;
-            flex-wrap: nowrap; /* Ensure boxes stay in one line */
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .objective-box {
-            position: relative; /* Added to position the number circle */
-            background-color: #ecf0f1;
+            align-items: flex-start; /* Aligns image and text at the top */
+            background-color: #ecf0f1; /* Same as the objective boxes */
             border-radius: 8px;
-            padding: 20px; /* Increased padding for better appearance */
-            width: 23%; /* Adjusted to fit four boxes in a row */
-            height: 150px; /* Increased height to accommodate content */
-            margin: 0 10px; /* Added margin to separate boxes horizontally */
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center text within the box */
-        }
-        .objective-box::before {
-            content: attr(data-number);
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #87CEEB;
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            text-align: center;
-            line-height: 25px;
-            font-weight: bold;
-        }
-
-        /* Removed dual titles to ensure each title stays above its corresponding figure */
-        .figure h3 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        /* Styling for the Key Results section */
-        .key-results {
-            background-color: #f8f9fa;
             padding: 20px;
+            width: 100%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image styling */
+        .data-image {
+            max-width: 100px; /* Adjust image size */
+            margin-right: 20px; /* Adds space between image and text */
             border-radius: 8px;
-            margin-top: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .key-results p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .key-results h3 {
-            text-align: center;
+
+        /* Text styling */
+        .data-text h4 {
             color: #2c3e50;
+            margin-bottom: 10px;
         }
-        <style>
-.data-sources {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
 
-.data-box {
-    background-color: #f0f4f8;
-    border-radius: 8px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        .data-text p, .data-text ul {
+            font-size: 1.1em;
+            color: #555;
+            text-align: justify;
+        }
 
-.data-box h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.data-box p, .data-box ul {
-    font-size: 1.1em;
-    color: #555;
-    text-align: justify;
-}
-
-.data-box ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-</style>
+        .data-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
 
     </style>
 </head>
@@ -175,57 +103,53 @@
         <p>
             Effective monitoring of urban plastic pollution is crucial for sustainable waste management, especially in rapidly urbanising regions. This study, conducted in Vientiane, Laos, utilized PlanetScope satellite imagery with a 3-meter resolution and high-resolution UAV imagery (~5 cm) to detect and map plastic waste. The research focuses on four key components:
         </p>
-        <div class="objectives">
-            <div class="objective-box" data-number="1">
-                Characterising urban plastic waste using spectral and textural features.
+
+        <!-- Data Sources Section -->
+        <h3>Data Sources</h3>
+        <div class="data-sources">
+            <div class="data-box">
+                <img src="path_to_satellite_image.jpg" alt="Satellite" class="data-image">
+                <div class="data-text">
+                    <h4>Satellite - Planet’s Super-Dove</h4>
+                    <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
+                    <p>Provides data across 8 spectral bands, enabling enhanced classification of surface materials.</p>
+                    <p>Near-daily imagery updates, making it ideal for ongoing environmental surveillance and tracking changes in plastic waste accumulation.</p>
+                </div>
             </div>
-            <div class="objective-box" data-number="2">
-                Evaluating the effectiveness of PlanetScope and UAV imagery (RGB) for plastic waste detection.
+
+            <div class="data-box">
+                <img src="path_to_drone_image.jpg" alt="Drone" class="data-image">
+                <div class="data-text">
+                    <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
+                    <p>Data obtained as part of a World Bank project.</p>
+                    <p>The drone was flown at an altitude of 400 meters, capturing imagery with a ground sample distance (GSD) of 5.19 cm, offering high precision for plastic detection.</p>
+                </div>
             </div>
-            <div class="objective-box" data-number="3">
-                Assessing the accuracy of Random Forest (RF) and Support Vector Machine (SVM) algorithms in classifying plastic.
-            </div>
-            <div class="objective-box" data-number="4">
-                Examining the operability and scalability of these methodologies for urban waste management.
+
+            <div class="data-box">
+                <img src="path_to_field_data_image.jpg" alt="Field Data Collection" class="data-image">
+                <div class="data-text">
+                    <h4>Ground Survey Data</h4>
+                    <p>Field data was essential for two key reasons:</p>
+                    <ul>
+                        <li>To provide a reference for plastic locations, aiding in the classification of plastic in drone and satellite imagery.</li>
+                        <li>To gather information on the types and sizes of plastic found around Vientiane.</li>
+                    </ul>
+                    <p>Two field surveys were conducted: one using existing pLitter Survey data, and another collecting primary data in June 2024.</p>
+                </div>
             </div>
         </div>
-
-        <div class="data-sources">
-    <div class="data-box">
-        <h3>Satellite - Planet’s Super-Dove</h3>
-        <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
-        <p>Provides data across 8 spectral bands, enabling enhanced classification of surface materials.</p>
-        <p>Near-daily imagery updates, making it ideal for ongoing environmental surveillance and tracking changes in plastic waste accumulation.</p>
-    </div>
-    <div class="data-box">
-        <h3>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h3>
-        <p>Data obtained as part of a World Bank project.</p>
-        <p>The drone was flown at an altitude of 400 meters above ground, capturing imagery with a ground sample distance (GSD) of 5.19 cm, offering high precision for plastic detection.</p>
-    </div>
-    <div class="data-box">
-        <h3>Ground Survey Data</h3>
-        <p>Field data was essential for two key reasons:</p>
-        <ul>
-            <li>To provide a reference for plastic locations, aiding in the classification of plastic in both drone and satellite imagery.</li>
-            <li>To gather information on the types and sizes of plastic found around Vientiane.</li>
-        </ul>
-        <p>Two field surveys were conducted: one using existing pLitter Survey data, and another collecting primary data in June 2024.</p>
-    </div>
-</div>
 
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure" style="margin-top: 40px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
         </div>
 
-        <!-- Key Results Section -->
-        <div class="key-results">
-            <h3>Key Results</h3>
-            <p>The study identified mean saturation and standard deviation of red, green and blue  values as critical spectral features, while contrast and dissimilarity were key textural features for accurately classifying plastic.</p>
-            <p>PlanetScope’s 3-meter resolution was found to be inadequate for detecting urban plastic waste accumulations, whereas UAV imagery (~5 cm resolution) provided more precise data for identifying plastic across the city.</p>
-            <p>The RF and SVM models achieved 86% and 96% accuracy, respectively, during training but experienced significant accuracy drops in real-world applications, with 38% for RF and 28% for SVM, due to misclassification errors, particularly between buildings and plastics.</p>
-            <p>Consequently, this study recommends several improvements for future research including: higher-resolution imagery, additional spectral bands and exploring advanced machine learning techniques like deep learning.</p>
-        </div>
+        <h3>Key Results</h3>
+        <p>The study identified mean saturation and standard deviation of RGB values as critical spectral features, while contrast and dissimilarity were key textural features for accurately classifying plastic.</p>
+        <p>PlanetScope’s 3-meter resolution was found to be inadequate for detecting urban plastic waste accumulations, whereas UAV imagery (~5 cm resolution) provided more precise data for identifying plastic across the city.</p>
+        <p>The RF and SVM models achieved 86% and 96% accuracy, respectively, during training but experienced significant accuracy drops in real-world applications, with 38% for RF and 28% for SVM, due to misclassification errors, particularly between buildings and plastics.</p>
+        <p>Consequently, this study recommends several improvements for future research.</p>
 
         <div class="key-figures">
             <div class="figure">
