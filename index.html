@@ -47,39 +47,42 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Objective boxes styling */
-        .objectives {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            gap: 20px; /* Adds space between the boxes horizontally */
-        }
-        .objective-box {
-            background-color: #ecf0f1;
-            border-radius: 8px;
-            padding: 20px;
-            width: 23%;
-            height: 200px; /* Makes the boxes longer vertically */
-            text-align: center;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
+     /* Objective boxes styling */
+.objectives {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px; /* Adds space between the boxes horizontally */
+}
+.objective-box {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 23%;
+    height: 200px; /* Makes the boxes longer vertically */
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
 
-        /* Numbers inside the boxes */
-        .objective-box::before {
-            content: attr(data-number);
-            position: absolute;
-            top: 10px; /* Adjusted to put the number inside the box */
-            left: 10px;
-            background-color: #87CEEB;
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            text-align: center;
-            line-height: 25px;
-            font-weight: bold;
-        }
+/* Numbers inside the boxes, centered */
+.objective-box::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 15px; /* Adjust the top position for alignment with the top of the box */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure the number is horizontally centered */
+    background-color: #87CEEB;
+    color: white;
+    border-radius: 50%;
+    width: 40px; /* Make the number circle larger */
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /* Ensures the number is vertically centered inside the circle */
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust font size for better readability */
+}
+
 
         /* Full width container for data sources */
         .data-sources {
@@ -183,7 +186,7 @@
         <h3>Data Sources</h3>
         <div class="data-sources">
             <div class="data-box">
-                <img src="path_to_satellite_image.jpg" alt="Satellite" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/satellite_cartoon.png" alt="Satellite" class="data-image">
                 <div class="data-text">
                     <h4>Satellite - Planet’s Super-Dove</h4>
                     <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
@@ -193,7 +196,7 @@
             </div>
 
             <div class="data-box">
-                <img src="path_to_drone_image.jpg" alt="Drone" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/Drone_cartoon.png" alt="Drone" class="data-image">
                 <div class="data-text">
                     <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
                     <p>Data obtained as part of a World Bank project.</p>
@@ -202,7 +205,7 @@
             </div>
 
             <div class="data-box">
-                <img src="path_to_field_data_image.jpg" alt="Field Data Collection" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
                 <div class="data-text">
                     <h4>Ground Survey Data</h4>
                     <p>Field data was essential for two key reasons:</p>
@@ -245,7 +248,7 @@
 
         <h3>RF Model Predictions vs. Human Predictions</h3>
         <div class="full-width-figure">
-            <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine.png" alt="RF vs Human Predictions">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine2.png" alt="RF vs Human Predictions">
         </div>
 
         <h3>Conclusion</h3>
