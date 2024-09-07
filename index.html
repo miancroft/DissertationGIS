@@ -47,27 +47,26 @@
 
         /* Full width container for data sources */
         .data-sources {
-            display: flex;
-            flex-direction: column;
+            display: block;
             margin-top: 20px;
-            gap: 20px; /* Adds space between each box */
         }
 
         /* Styling each data box */
         .data-box {
             display: flex;
-            align-items: flex-start; /* Aligns image and text at the top */
-            background-color: #ecf0f1; /* Same as the objective boxes */
+            align-items: flex-start;
+            background-color: #ecf0f1;
             border-radius: 8px;
             padding: 20px;
-            width: 100%;
+            margin-bottom: 20px;
+            max-width: 100%; /* Ensure it doesn't overflow */
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
         /* Image styling */
         .data-image {
-            max-width: 100px; /* Adjust image size */
-            margin-right: 20px; /* Adds space between image and text */
+            max-width: 100px;
+            margin-right: 20px;
             border-radius: 8px;
         }
 
@@ -86,6 +85,32 @@
         .data-text ul {
             list-style-type: disc;
             margin-left: 20px;
+        }
+
+        /* Ensure images fit within the content area */
+        .full-width-figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Flexbox for side-by-side figures */
+        .key-figures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .key-figures .figure {
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .key-figures .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
     </style>
@@ -108,7 +133,7 @@
         <h3>Data Sources</h3>
         <div class="data-sources">
             <div class="data-box">
-                <img src="path_to_satellite_image.jpg" alt="Satellite" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/satellite_cartoon.png" alt="Satellite" class="data-image">
                 <div class="data-text">
                     <h4>Satellite - Planet’s Super-Dove</h4>
                     <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
@@ -118,7 +143,7 @@
             </div>
 
             <div class="data-box">
-                <img src="path_to_drone_image.jpg" alt="Drone" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/Drone_cartoon.png" alt="Drone" class="data-image">
                 <div class="data-text">
                     <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
                     <p>Data obtained as part of a World Bank project.</p>
@@ -127,7 +152,7 @@
             </div>
 
             <div class="data-box">
-                <img src="path_to_field_data_image.jpg" alt="Field Data Collection" class="data-image">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
                 <div class="data-text">
                     <h4>Ground Survey Data</h4>
                     <p>Field data was essential for two key reasons:</p>
