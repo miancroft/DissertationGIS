@@ -127,6 +127,39 @@
             text-align: center;
             color: #2c3e50;
         }
+        <style>
+.data-sources {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.data-box {
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.data-box h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.data-box p, .data-box ul {
+    font-size: 1.1em;
+    color: #555;
+    text-align: justify;
+}
+
+.data-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+</style>
+
     </style>
 </head>
 <body>
@@ -156,6 +189,29 @@
                 Examining the operability and scalability of these methodologies for urban waste management.
             </div>
         </div>
+
+        <div class="data-sources">
+    <div class="data-box">
+        <h3>Satellite - Planet’s Super-Dove</h3>
+        <p>Selected for its 3-meter spatial resolution, which is suitable for detailed environmental monitoring.</p>
+        <p>Provides data across 8 spectral bands, enabling enhanced classification of surface materials.</p>
+        <p>Near-daily imagery updates, making it ideal for ongoing environmental surveillance and tracking changes in plastic waste accumulation.</p>
+    </div>
+    <div class="data-box">
+        <h3>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h3>
+        <p>Data obtained as part of a World Bank project.</p>
+        <p>The drone was flown at an altitude of 400 meters above ground, capturing imagery with a ground sample distance (GSD) of 5.19 cm, offering high precision for plastic detection.</p>
+    </div>
+    <div class="data-box">
+        <h3>Ground Survey Data</h3>
+        <p>Field data was essential for two key reasons:</p>
+        <ul>
+            <li>To provide a reference for plastic locations, aiding in the classification of plastic in both drone and satellite imagery.</li>
+            <li>To gather information on the types and sizes of plastic found around Vientiane.</li>
+        </ul>
+        <p>Two field surveys were conducted: one using existing pLitter Survey data, and another collecting primary data in June 2024.</p>
+    </div>
+</div>
 
         <h3>Study Map and Locations of Data Sources</h3>
         <div class="full-width-figure" style="margin-top: 40px;">
