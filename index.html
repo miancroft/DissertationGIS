@@ -47,7 +47,7 @@
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden; /* Ensure content doesn't overflow the container */
+        overflow: hidden;
     }
 
     /* Banner alignment */
@@ -96,6 +96,32 @@
         font-weight: bold;
         font-size: 1.2em;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Data Sources - Flex layout for image and text */
+    .data-sources {
+        margin-top: 20px;
+    }
+
+    .data-box {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .data-image {
+        width: 150px; /* Set a smaller fixed width for images */
+        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .data-text {
+        flex: 1; /* Make the text fill the remaining space */
+    }
+
+    .data-text h4 {
+        margin-top: 0;
     }
 
     /* Ensure all images and figures fit within the max-width of the content */
@@ -173,6 +199,16 @@
         .key-figures img,
         .full-width-figure img {
             max-width: 100%;
+        }
+
+        /* Stack images and text vertically on smaller screens */
+        .data-box {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .data-image {
+            margin-bottom: 10px;
         }
     }
     </style>
