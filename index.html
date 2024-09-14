@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body, p, ul, li {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em; /* Ensure bullet points have the same size as other text */
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            font-size: 1.1em; /* Ensure text is readable */
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
         ul, li {
             margin: 0;
-            padding-left: 1.2em; /* Adjust this value for alignment */
+            padding-left: 1.2em;
             list-style-position: outside;
         }
 
@@ -49,44 +49,42 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
- /* Objective boxes styling */
-.objectives {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px; /* Adds space between the boxes horizontally */
-}
-.objective-box {
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    padding: 20px;
-    width: 23%;
-    height: 200px; /* Makes the boxes longer vertically */
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin-bottom: 40px; /* Ensures space below for the number */
-}
+        /* Objective boxes styling */
+        .objectives {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px; /* Adds space between the boxes horizontally */
+        }
+        .objective-box {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            width: 23%;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-bottom: 40px; /* Ensures space below for the number */
+        }
 
-/* Numbers on the border of the boxes */
-.objective-box::before {
-    content: attr(data-number);
-    position: absolute;
-    top: -20px; /* Position the number above the box, just outside */
-    left: 50%; /* Center the number horizontally on the border */
-    transform: translateX(-50%); /* Ensures horizontal centering */
-    background-color: #87CEEB;
-    color: white;
-    border-radius: 50%;
-    width: 40px; /* Size of the circle */
-    height: 40px;
-    text-align: center;
-    line-height: 40px; /* Vertically centers the number in the circle */
-    font-weight: bold;
-    font-size: 1.2em; /* Adjust font size for better readability */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
-
+        /* Numbers on the border of the boxes */
+        .objective-box::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -20px; /* Position the number above the box, just outside */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #87CEEB;
+            color: white;
+            border-radius: 50%;
+            width: 40px; /* Size of the circle */
+            height: 40px;
+            text-align: center;
+            line-height: 40px; /* Vertically centers the number in the circle */
+            font-weight: bold;
+            font-size: 1.2em; /* Adjust font size for better readability */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+        }
 
         /* Full width container for data sources */
         .data-sources {
@@ -102,18 +100,16 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            max-width: 100%; /* Ensure it doesn't overflow */
+            max-width: 100%;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Image styling */
         .data-image {
             max-width: 100px;
             margin-right: 20px;
             border-radius: 8px;
         }
 
-        /* Text styling */
         .data-text h4 {
             color: #2c3e50;
             margin-bottom: 10px;
@@ -124,7 +120,6 @@
             margin-left: 0;
         }
 
-        /* Ensure images fit within the content area */
         .full-width-figure img {
             max-width: 100%;
             height: auto;
@@ -133,7 +128,7 @@
         }
 
         .full-width-figure {
-            margin-top: 40px; /* Adds space before figures */
+            margin-top: 40px;
         }
 
         /* Flexbox for side-by-side figures */
@@ -154,6 +149,49 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
+        /* Media Queries for Mobile Optimization */
+        @media screen and (max-width: 768px) {
+            /* Adjust font sizes for smaller screens */
+            body, p, ul, li {
+                font-size: 1em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+            h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .content {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            /* Stack objective boxes vertically on smaller screens */
+            .objectives {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .objective-box {
+                width: 100%; /* Full width on mobile */
+                margin-bottom: 20px;
+            }
+
+            /* Stack data boxes vertically */
+            .data-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Stack key figures vertically */
+            .key-figures {
+                flex-direction: column;
+            }
+            .key-figures .figure {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
