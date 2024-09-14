@@ -61,7 +61,13 @@
         height: auto;
     }
 
-/* Objective boxes styling */
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .objectives {
     display: flex;
     justify-content: space-between;
@@ -74,7 +80,7 @@
     background-color: #ecf0f1;
     border-radius: 8px;
     padding: 20px;
-    flex: 1 1 calc(25% - 20px); /* Make the boxes fit on large screens */
+    flex: 1 1 calc(25% - 20px); /* Make the boxes fit on larger screens */
     text-align: center;
     margin-bottom: 40px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -82,9 +88,10 @@
     overflow-wrap: break-word; /* Ensure text wraps inside the box */
     word-wrap: break-word;
     hyphens: auto; /* Allow hyphenation on long words */
+    max-width: 100%; /* Prevent boxes from going outside the screen */
 }
 
-/* Add the number circles back in */
+/* Add the number circles */
 .objective-box::before {
     content: attr(data-number);
     position: absolute;
@@ -94,36 +101,40 @@
     background-color: #87CEEB;
     color: white;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     line-height: 40px;
     font-weight: bold;
-    font-size: 1.0em;
+    font-size: 1.2em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile view - Fixing text overflow on stacked boxes */
+/* Mobile view - Fixing text overflow and right-hand side overflow on stacked boxes */
 @media screen and (max-width: 768px) {
     .objectives {
-        flex-direction: column;
-        gap: 8px; /* Optional, reduce the gap on smaller screens */
+        flex-direction: column; /* Stack the boxes vertically */
+        gap: 10px; /* Reduce the gap between boxes */
     }
+
     .objective-box {
         flex: 1 1 100%; /* Ensure the boxes take full width on mobile */
         margin-bottom: 20px;
-        padding: 10px; /* Optional, reduce padding for smaller screens */
+        padding: 15px; /* Adjust padding for mobile */
         word-wrap: break-word; /* Ensure long words are wrapped */
+        max-width: 100%; /* Prevent overflow on the right side */
+        margin-right: 0; /* Ensure no margin pushes the boxes outside the screen */
+        box-sizing: border-box; /* Include padding and border in the box size */
     }
 
     .objective-box::before {
         top: -20px; /* Keep the number circle above the box */
         left: 50%;
         transform: translateX(-50%);
-        width: 40px;
-        height: 40px;
-        font-size: 1.2em; /* Keep number size consistent */
-        line-height: 40px;
+        width: 35px; /* Smaller number circle on mobile */
+        height: 35px;
+        font-size: 1em;
+        line-height: 35px;
     }
 }
 
