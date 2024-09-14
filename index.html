@@ -98,7 +98,7 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 
-    /* Data Sources - Flex layout for image and text */
+    /* Data Sources - Flex layout for image and text in the same box */
     .data-sources {
         margin-top: 20px;
     }
@@ -106,7 +106,11 @@
     .data-box {
         display: flex;
         align-items: flex-start;
+        background-color: #ecf0f1; /* Ensure the box is visually grouped */
+        padding: 20px;
+        border-radius: 8px;
         margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow for visual separation */
     }
 
     .data-image {
