@@ -158,7 +158,116 @@
         <h2>Mia Croft</h2>
         <h3>For the degree of MSc in Geographical Information Science</h3>
 
-        <!-- Rest of the content follows... -->
+        <h3>Abstract</h3>
+        <p>
+            Effective monitoring of urban plastic pollution is crucial for sustainable waste management, especially in rapidly urbanising regions. This study, conducted in Vientiane, Laos, utilised PlanetScope satellite imagery with a 3-meter resolution and high-resolution UAV imagery (~5 cm) to detect and map plastic waste. The research focuses on four key components:
+        </p>
+
+        <!-- Four Objectives Section -->
+        <div class="objectives">
+            <div class="objective-box" data-number="1">
+                Characterising urban plastic waste using spectral and textural features.
+            </div>
+            <div class="objective-box" data-number="2">
+                Evaluating the effectiveness of PlanetScope and UAV imagery (RGB) for plastic waste detection.
+            </div>
+            <div class="objective-box" data-number="3">
+                Assessing the accuracy of Random Forest (RF) and Support Vector Machine (SVM) algorithms in classifying plastic.
+            </div>
+            <div class="objective-box" data-number="4">
+                Examining the operability and scalability of these methodologies for urban waste management.
+            </div>
+        </div>
+
+        <!-- Data Sources Section -->
+        <h3>Data Sources</h3>
+        <div class="data-sources">
+            <div class="data-box">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/satellite_cartoon.png" alt="Satellite" class="data-image">
+                <div class="data-text">
+                    <h4>Satellite - Planet’s Super-Dove 8-bands</h4>
+                    <p>Selected for its 3-meter spatial resolution, and near-daily imagery updates, ideal for ongoing environmental surveillance and tracking changes in plastic waste accumulation.</p>
+                    <p>Provides data across 8 spectral bands, enabling enhanced classification of surface materials.</p>
+                </div>
+            </div>
+
+            <div class="data-box">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/Drone_cartoon.png" alt="Drone" class="data-image">
+                <div class="data-text">
+                    <h4>UAV - Fixed-wing VTOL Drone Imagery (November 2021)</h4>
+                    <p>Data obtained as part of a World Bank project.</p>
+                    <p>The drone was flown at an altitude of 400 meters, capturing imagery with a ground sampling distance (GSD) of 5.19 cm, offering high precision for plastic detection.</p>
+                </div>
+            </div>
+
+            <div class="data-box">
+                <img src="https://miancroft.github.io/DissertationGIS/Images/FieldCollection_cartoon.png" alt="Field Data Collection" class="data-image">
+                <div class="data-text">
+                    <h4>Ground Survey Data</h4>
+                    <p>Field data was essential for two key reasons: </p>
+                    <ul>
+                        <li>To provide a reference for plastic locations, aiding in the classification of plastic in drone and satellite imagery.</li>
+                        <li>To gather information on the types and sizes of plastic found around Vientiane.</li>
+                    </ul>
+                    <p>Two field surveys were conducted, one using existing pLitter survey data and another collected as primary data in June 2024.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Study Map and Locations of Data Sources</h3>
+        <div class="full-width-figure">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/Study_map.png" alt="Study Map">
+        </div>
+
+        <!-- Methodology Section -->
+        <h3>Methodology</h3>
+        <div class="full-width-figure" style="margin-top: 20px;">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/methodsfigure.png" alt="Methodology Figure">
+        </div>
+
+        <h3>Key Results</h3>
+        <p>The study identified mean saturation and standard deviation of RGB values as critical spectral features, while contrast and dissimilarity were key textural features for accurately classifying plastic.</p>
+        <p>PlanetScope’s 3-meter resolution was found to be inadequate for detecting urban plastic waste accumulations, whereas UAV imagery (~5 cm resolution) provided more precise data for identifying plastic across the city.</p>
+        <p>The RF and SVM models achieved 86% and 96% accuracy, respectively, during training but experienced significant accuracy drops in real-world applications, with 38% for RF and 28% for SVM, due to misclassification errors, particularly between buildings and plastics.</p>
+        <p>Consequently, this study recommends several improvements for future research.</p>
+
+        <div class="key-figures">
+            <div class="figure">
+                <h3>PlanetScope vs. UAV Imagery</h3>
+                <img src="https://miancroft.github.io/DissertationGIS/Images/PlanetversusDrone.png" alt="PlanetScope vs. UAV Imagery">
+            </div>
+            <div class="figure">
+                <h3>Key Plastic Features</h3>
+                <img src="https://miancroft.github.io/DissertationGIS/Images/Feature_prediction.png" alt="Feature Prediction">
+            </div>
+        </div>
+
+        <h3>RF Model Predictions vs. Human Predictions</h3>
+        <div class="full-width-figure">
+            <img src="https://miancroft.github.io/DissertationGIS/Images/Humanversusmachine.png" alt="RF vs Human Predictions">
+        </div>
+
+        <h3>Conclusion</h3>
+        <p>
+            The proposed methodology shows promise for enhancing waste management in Vientiane, offering the potential to improve plastic waste mapping, optimise resource allocation, and support policy development aimed at reducing illegal dumping. Integrating these methodologies into GIS frameworks could also improve city-wide planning and environmental monitoring. Future research should focus on improving the accuracy and scalability of these methods through higher-resolution imagery, additional spectral bands, or advanced machine learning techniques like deep learning. Expanding the study to diverse urban areas will help validate and refine the methodology, ensuring its broader applicability. While challenges remain, this research is a key step towards leveraging remote sensing and machine learning technologies for urban environmental management, providing valuable insights into addressing plastic pollution in rapidly urbanising regions like Vientiane.
+        </p>
+
+        <h3>References</h3>
+        <p class="references">
+            Asian Institute of Technology (AIT). (2024). New Regional Initiative Launched to Combat Plastic Pollution in Mekong Countries. AIT News. Available at: https://ait.ac.th/2024/04/new-regional-initiative-launched-to-combat-plastic-pollution-in-mekong-countries/ [Accessed 10 May. 2024].
+            <br>
+            GIC - AIT (2024). pLitter. [online] Available at: https://www.plitter.org/home [Accessed 11 Mar. 2024].
+            <br>
+            Haralick, R.M, Shanmugam, K., Dinstein, I. (1973). Textural Features for Image Classification, IEE Transactions on Systems, Man and Cybernetics, SMC-3, 6, pp.610-621.
+            <br>
+            Kruse, C., Boyda, E., Chen, S., Karra, K., Bou-Nahra, T., Hammer, D., Mathis, J., Maddalene, T., Jambeck, J., & Laurier, F. (2023). Satellite monitoring of terrestrial plastic waste. PLOS ONE, 18(1), e0278997. https://doi.org/10.1371/journal.pone.0278997.
+            <br>
+            Lavender, S. (2022). Detection of Waste Plastics in the Environment: Application of Copernicus Earth Observation Data. Remote Sensing, 14(19), 4772. https://doi.org/10.3390
+        </p>
+
+        <h3>Contact Details</h3>
+        <p>If you are interested in learning more or would like access to the data sources used in this research, please contact me at <a href="mailto:mianikitacroft@gmail.com">mianikitacroft@gmail.com</a>.</p>
+
     </div>
 </body>
 </html>
