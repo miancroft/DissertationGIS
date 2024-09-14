@@ -1,166 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</title>
     <style>
      body, p, ul, li {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+        font-family: Arial, sans-serif;
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
 
-ul, li {
-    margin: 0;
-    padding-left: 1.2em;
-    list-style-position: outside;
-}
-
-h1 {
-    color: #2c3e50;
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-h2, h3, h4 {
-    color: #34495e;
-    margin-top: 0;
-}
-h2 {
-    text-align: center;
-}
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.content {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Banner alignment */
-.banner {
-    max-width: 1000px;
-    width: 100%; /* Ensure it fits the width of the content */
-    margin: 0 auto;
-}
-.banner img {
-    width: 100%; /* Ensure the image fits the full width of the banner */
-    height: auto;
-}
-
-/* Objective boxes styling */
-.objectives {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px;
-}
-.objective-box {
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    padding: 20px;
-    width: 23%;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.objective-box::before {
-    content: attr(data-number);
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #87CEEB;
-    color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-weight: bold;
-    font-size: 1.2em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Ensure all images and figures fit within the max-width of the content */
-.full-width-figure img,
-.key-figures img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Prevent any inline spacing issues */
-    margin: 0 auto;
-}
-
-/* Adjust content width to avoid overflow */
-.full-width-figure,
-.key-figures .figure {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Media Queries for Mobile Optimization */
-@media screen and (max-width: 768px) {
-    body, p, ul, li {
-        font-size: 1em;
+    ul, li {
+        margin: 0;
+        padding-left: 1.2em;
+        list-style-position: outside;
     }
 
     h1 {
-        font-size: 2em;
+        color: #2c3e50;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
     }
-    h2, h3 {
+    h2, h3, h4 {
+        color: #34495e;
+        margin-top: 0;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
         font-size: 1.2em;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 40px;
     }
 
     .content {
-        padding: 10px;
-        margin: 10px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure content doesn't overflow the container */
     }
 
-    .objectives {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .objective-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .key-figures {
-        flex-direction: column;
-    }
-    .key-figures .figure {
-        margin-bottom: 20px;
-    }
-
-    /* Ensure banner aligns properly on mobile screens */
+    /* Banner alignment */
     .banner {
-        max-width: 100%;
+        max-width: 1000px;
+        width: 100%; /* Ensure it fits the width of the content */
         margin: 0 auto;
     }
     .banner img {
-        width: 100%;
+        width: 100%; /* Ensure the image fits the full width of the banner */
+        height: auto;
     }
 
-    /* Adjust key figures and full-width figures for smaller screens */
-    .key-figures img,
-    .full-width-figure img {
-        max-width: 100%;
+    /* Objective boxes styling */
+    .objectives {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        gap: 20px;
+        flex-wrap: wrap; /* Allows wrapping for small screens */
     }
-}
+    .objective-box {
+        background-color: #ecf0f1;
+        border-radius: 8px;
+        padding: 20px;
+        width: 23%;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .objective-box::before {
+        content: attr(data-number);
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #87CEEB;
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 1.2em;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ensure all images and figures fit within the max-width of the content */
+    .full-width-figure img,
+    .key-figures img {
+        max-width: 100%; /* Ensure images fit within their container */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Adjust content width to avoid overflow */
+    .full-width-figure,
+    .key-figures .figure {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Add some margin between figures */
+    .key-figures .figure {
+        margin-bottom: 30px;
+    }
+
+    /* Fix for ensuring content width within the content container */
+    .full-width-figure,
+    .key-figures {
+        width: 100%;
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    /* Media Queries for Mobile Optimization */
+    @media screen and (max-width: 768px) {
+        body, p, ul, li {
+            font-size: 1em;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+        h2, h3 {
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .objectives {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .objective-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .key-figures {
+            flex-direction: column;
+        }
+        .key-figures .figure {
+            margin-bottom: 20px;
+        }
+
+        /* Ensure banner aligns properly on mobile screens */
+        .banner {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .banner img {
+            width: 100%;
+        }
+
+        /* Adjust key figures and full-width figures for smaller screens */
+        .key-figures img,
+        .full-width-figure img {
+            max-width: 100%;
+        }
+    }
     </style>
 </head>
 <body>
