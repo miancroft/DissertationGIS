@@ -84,6 +84,25 @@
     hyphens: auto; /* Allow hyphenation on long words */
 }
 
+/* Add the number circles back in */
+.objective-box::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #87CEEB;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Mobile view - Fixing text overflow on stacked boxes */
 @media screen and (max-width: 768px) {
     .objectives {
@@ -95,6 +114,16 @@
         margin-bottom: 20px;
         padding: 15px; /* Optional, reduce padding for smaller screens */
         word-wrap: break-word; /* Ensure long words are wrapped */
+    }
+
+    .objective-box::before {
+        top: -20px; /* Keep the number circle above the box */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em; /* Keep number size consistent */
+        line-height: 40px;
     }
 }
 
