@@ -49,6 +49,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Styling for the banner to align with the content width */
+        .banner {
+            max-width: 1000px; /* Ensure the banner aligns with the content */
+            margin: 0 auto; /* Center the banner */
+        }
+
         /* Objective boxes styling */
         .objectives {
             display: flex;
@@ -191,12 +197,18 @@
             .key-figures .figure {
                 margin-bottom: 20px;
             }
+
+            /* Ensure banner aligns properly on mobile screens */
+            .banner {
+                max-width: 100%; /* Full width on mobile */
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div class="banner" style="text-align: center; margin-bottom: 20px;">
             <img src="https://miancroft.github.io/DissertationGIS/Images/WebedinburghTitle.png" alt="Website Title">
         </div>
         <h1>An Investigation of PlanetScope and UAV Imagery for Automated Plastic Waste Detection in Vientiane</h1>
